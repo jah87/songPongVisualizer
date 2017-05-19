@@ -6,32 +6,19 @@ class SongsList extends Component {
         this.props.children.selectSong(songId); // calling selectSong function from props passed through children in CloneElement from App
     }
 
-
     render() {
-        // console.log('inside songlist')
-        // console.log(this.props)
-        // console.log('inside songlist')
         var songs = this.props.songs;
         var eachSong = songs.map(song =>
             <div key={song.id} className="card song-Card">
                 <h4 className="card-header">{song.title}</h4>
-                <div className="card-block">
-                    <div className="container row">
+                <div className="card-block bg-inverse">
                         <button onClick={() => { this.playSong(song.id) }} className="btn btn-secondary">Play</button>
-                        <Link className="nav-link" to={`/songs/${song.id}`}>
-                            <button className="btn btn-primary">
-                                View Details
-                            </button>
-                        </Link>
-                    </div>
-
                 </div>
             </div>
         )
 
-        // console.log(this.props)
         return (
-            <div className="row">
+            <div className="row centered">
                 {eachSong}
             </div>
         )

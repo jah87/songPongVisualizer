@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import masterVisualizer from '../public/js/Visualizer.js'
 
 class SpotPlayer extends Component {
 
@@ -13,14 +12,10 @@ class SpotPlayer extends Component {
     
     songPlayState = (value) => {
         this.props.playPause(value)
-        // masterVisualizer.visualizeRender()
     }
 
     render() {
         var song = this.props.currentSong;
-        // console.log('spotty')
-        // console.log(this.props)
-        // console.log('just inside the spot player')
 
         return (
             <div className="fixed-bottom navbar-inverse bg-inverse">
@@ -32,7 +27,6 @@ class SpotPlayer extends Component {
                     <audio src={song.source} autoPlay={this.props.songPlaying === false ? false : true}  
                     controls onPause={()=>{this.songPlayState(false)}} 
                     onPlay={()=>{this.songPlayState(true)}} id="audioPlayer">
-                        
                         Your browser does not support the audio tag.
                     </audio>
                 <div onClick={()=>{this.clickNext()}} className="carousel-control-next-icon arrowMargins" ></div>
