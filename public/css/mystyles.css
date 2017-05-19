@@ -1,0 +1,25 @@
+ul li {
+    list-style: none
+}
+h3 {
+    float: left
+}
+.spaceTop {
+  margin-top: 10px;
+}
+.spaceBot {
+  margin-bottom: 10px;
+}
+.song-Card {
+    width: 24rem;
+    margin: 10px;
+}
+.btn {
+    cursor: pointer
+}
+.arrowMargins {
+    margin: 5px 10px;
+}
+.whiteText {
+    color: white;
+}
