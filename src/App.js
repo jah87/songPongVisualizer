@@ -87,9 +87,9 @@ class App extends Component {
 
         var visualStyle = '';
 
-        if(this.state.tOSTRTA === 4) {
-          // High Red, med green, no blue, no gradient, random
-          visualStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() * 256) * 150))) + ", " + (Math.floor(Math.random() * 100)) + " , " + 0 + ")";
+        if(this.state.tOSTRTA === this.props.route.songs.length - 1) {
+          // Gradient Red, Shift Green, Rand Blue
+          visualStyle = "rgb(" + (Math.random()*(255-increment)) + ", " + (Math.floor(240)) + " , " + (Math.ceil(Math.random()*100)) + ")";
         } else if (this.state.tOSTRTA === 1) { 
           // Pink to Gold, gradient, no random
           visualStyle = "rgb(" + (255) + ", " + (increment - 100) + " , " + (255 - increment) + ")";
@@ -99,8 +99,12 @@ class App extends Component {
         } else if (this.state.tOSTRTA === 0) { 
           // Blue to green, gradient, no random
           visualStyle = "rgb(" + (0) + ", " + (increment + 100) + " , " + (255 - increment) + ")";
+        } else if (this.state.tOSTRTA === 3) {
+          // Mid gradient Red, mid green, mid blue, randoms everywhere
+          visualStyle = "rgb(" + (Math.ceil((Math.random()+increment) * 180)) + ", " + (Math.floor(Math.random() * 120)) + " , " + (Math.floor(Math.random()*75)) + ")";
         } else {
-          visualStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() * 256) * 150))) + ", " + (Math.floor(Math.random() * 100)) + " , " + 0 + ")";
+          // Shift Gradient in Red and Blue, Random Green adjust
+          visualStyle = "rgb(" + (100+increment) + ", " + (Math.floor(Math.random() * 120)) + " , " + (255-increment) + ")";
         }
 
         canvasContext.fillStyle = visualStyle;
@@ -135,7 +139,7 @@ class App extends Component {
       <div className="App">
       <canvas></canvas>
         <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse">
-          <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icon.svg"/></Link>
+          <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icon.svg" alt="Logo" /></Link>
         </nav>
 
         <div className="container-fluid spaceTop">
