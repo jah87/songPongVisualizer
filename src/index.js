@@ -4,7 +4,6 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import App from './App';
 import SongsList from './components/SongsList';
 import SongDetails from './components/SongDetails';
-import About from './components/About';
 import './index.css';
 import '../public/css/mystyles.css';
 import '../public/css/bootstrap.min.css';
@@ -30,7 +29,6 @@ ReactDOM.render((
       <Route path="songs" component={SongsList} />
       <Route path="songs/:id" component={SongDetails} />
 
-      <Route path="about" component={About} />
 
     </Route>
   </Router>

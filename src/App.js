@@ -66,17 +66,17 @@ class App extends Component {
 
             <Link className="nav-link" to="/songs"> All Songs</Link>
 
-            <Link className="nav-link" to="/about"> About</Link>
-
           </ul>
         </nav>
 
         <div className="container spaceTop">
+          
           {React.cloneElement(this.props.children, { songs }, { selectSong : this.selectSong})}
+
         </div>
 
         <SpotPlayer playPause={this.playPause} songPlaying={this.state.songPlaying} currentSong={songs[this.state.tOSTRTA]} clickPrev={this.clickPrev} clickNext={this.clickNext} />
-
+        
       </div>
 
     );

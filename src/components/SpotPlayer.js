@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import masterVisualizer from '../public/js/Visualizer.js'
 
 class SpotPlayer extends Component {
 
@@ -12,6 +13,7 @@ class SpotPlayer extends Component {
     
     songPlayState = (value) => {
         this.props.playPause(value)
+        // masterVisualizer.visualizeRender()
     }
 
     render() {

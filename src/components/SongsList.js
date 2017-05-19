@@ -3,14 +3,14 @@ import { Link } from 'react-router';
 
 class SongsList extends Component {
     playSong = (songId) => {
-        this.props.children.selectSong(songId); // this.props.children.routes.clones.wars.items
+        this.props.children.selectSong(songId); // calling selectSong function from props passed through children in CloneElement from App
     }
 
 
     render() {
-        console.log('inside songlist')
-        console.log(this.props)
-        console.log('inside songlist')
+        // console.log('inside songlist')
+        // console.log(this.props)
+        // console.log('inside songlist')
         var songs = this.props.songs;
         var eachSong = songs.map(song =>
             <div key={song.id} className="card song-Card">
@@ -29,7 +29,7 @@ class SongsList extends Component {
             </div>
         )
 
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className="row">
                 {eachSong}
