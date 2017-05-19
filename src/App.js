@@ -76,7 +76,7 @@ class App extends Component {
     var bufferLength = analyser.frequencyBinCount;
     var frequencyData = new Uint8Array(bufferLength);
 
-    function visualizeRender() {
+    var visualizeRender = ()=> {
       canvasContext.clearRect(0, 0, canvas.width, canvas.height);
       analyser.getByteFrequencyData(frequencyData);
 
@@ -84,7 +84,27 @@ class App extends Component {
 
       for (var increment = 0; increment < bufferLength; increment++) {
         frequencyHeight = frequencyData[increment] * (canvas.height * 0.00345678);
-        canvasContext.fillStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() * 256) * 150))) + ", " + (Math.floor(Math.random() * 100)) + " , " + 0 + ")";
+
+        var visualStyle = '';
+
+        if(this.state.tOSTRTA === 4) {
+          // High Red, med green, no blue, no gradient, random
+          visualStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() * 256) * 150))) + ", " + (Math.floor(Math.random() * 100)) + " , " + 0 + ")";
+        } else if (this.state.tOSTRTA === 1) { 
+          // Pink to Gold, gradient, no random
+          visualStyle = "rgb(" + (255) + ", " + (increment - 100) + " , " + (255 - increment) + ")";
+        } else if (this.state.tOSTRTA === 2) {
+          // Blue and White, no gradient, random
+          visualStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() *256) * 0))) + ", " + (Math.floor(Math.random() *255)) + " , " + 255 + ")";
+        } else if (this.state.tOSTRTA === 0) { 
+          // Blue to green, gradient, no random
+          visualStyle = "rgb(" + (0) + ", " + (increment + 100) + " , " + (255 - increment) + ")";
+        } else {
+          visualStyle = "rgb(" + (Math.ceil((Math.floor(Math.random() * 256) * 150))) + ", " + (Math.floor(Math.random() * 100)) + " , " + 0 + ")";
+        }
+
+        canvasContext.fillStyle = visualStyle;
+        console.log(canvasContext.fillStyle)
         canvasContext.fillRect(
           x,
           canvas.height - frequencyHeight,
@@ -115,12 +135,7 @@ class App extends Component {
       <div className="App">
       <canvas></canvas>
         <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse">
-          <Link className="navbar-brand" to="/"> Home</Link>
-          <ul className="navbar-nav">
-
-            <Link className="nav-link" to="/songs"> All Songs</Link>
-
-          </ul>
+          <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icon.svg"/></Link>
         </nav>
 
         <div className="container-fluid spaceTop">
