@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   clickPrev = () => {
-    console.log(this.state.tOSTRTA)
+    // console.log(this.state.tOSTRTA) 
     if (this.state.tOSTRTA === 0) {
       this.setState({
         tOSTRTA: this.props.route.songs.length - 1
@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   clickNext() {
-    console.log(this.state.tOSTRTA)
+    // console.log(this.state.tOSTRTA)
     if (this.state.tOSTRTA === this.props.route.songs.length - 1) {
       this.setState({
         tOSTRTA: 0
@@ -108,7 +108,6 @@ class App extends Component {
         }
 
         canvasContext.fillStyle = visualStyle;
-        console.log(canvasContext.fillStyle)
         canvasContext.fillRect(
           x,
           canvas.height - frequencyHeight,
@@ -139,7 +138,7 @@ class App extends Component {
       <div className="App">
       <canvas></canvas>
         <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse">
-          <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icon.svg" alt="Logo" /></Link>
+          <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icons/icon_main.svg" alt="Logo" /></Link>
         </nav>
 
         <div className="container-fluid spaceTop">
