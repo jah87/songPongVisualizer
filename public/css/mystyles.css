@@ -42,18 +42,7 @@ audio::-webkit-media-controls-panel {
     width: calc(100% + 30px); /* Adjust as needed */
 }
 
-@media only screen and (max-device-width: 767px) and (orientation: portrait) {
-  .song-Card {
-    display: none;
-  }
-}
-@media only screen and (max-device-width: 767px) and (orientation: landscape) {
-  .song-Card {
-    display: none;
-  }
-}
-
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 
 body {
   overflow: hidden;
@@ -114,4 +103,13 @@ canvas {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media(max-width: 767px){
+  #hide-cards-mobile {
+    display: none;
+  }
+  #hide-nav-mobile {
+    display: none;
+  }
 }

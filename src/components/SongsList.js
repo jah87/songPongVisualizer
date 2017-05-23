@@ -18,7 +18,7 @@ class SongsList extends Component {
         )
 
         return (
-            <div className="row centered">
+            <div className="row centered" id="hide-cards-mobile">
                 {eachSong}
             </div>
         )

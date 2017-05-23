@@ -137,7 +137,7 @@ class App extends Component {
     return (
       <div className="App">
       <canvas></canvas>
-        <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse">
+        <nav className="navbar navbar-toggleable-md bg-faded navbar-inverse bg-inverse" id="hide-nav-mobile">
           <Link className="navbar-brand" to="/"> <img className="App-logo" src="./icons/icon_main.svg" alt="Logo" /></Link>
         </nav>
 
