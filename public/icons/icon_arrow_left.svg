@@ -3,5 +3,5 @@
 <svg version="1.1" baseProfile="basic"
    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
    viewBox="0 0 32 32" xml:space="preserve">
-  <path transform="matrix(0.032,0,0,0.032,0,0)" stroke="none" style="fill:#0866CC" d="M 901 385 L 347 385 L 569 163 C 604 128 604 70 569 35 C 533 0 476 0 440 35 L 0 476 L 62 540 C 62 540 62 540 62 540 L 441 930 C 459 949 482 958 506 958 C 529 958 551 949 569 932 C 605 897 606 840 571 804 L 355 581 L 901 581 C 956 581 1000 537 1000 483 C 1000 429 956 385 901 385 z"/>
+  <path transform="matrix(0.032,0,0,0.032,0,0)" stroke="none" style="fill:#FFFFFF" d="M 901 385 L 347 385 L 569 163 C 604 128 604 70 569 35 C 533 0 476 0 440 35 L 0 476 L 62 540 C 62 540 62 540 62 540 L 441 930 C 459 949 482 958 506 958 C 529 958 551 949 569 932 C 605 897 606 840 571 804 L 355 581 L 901 581 C 956 581 1000 537 1000 483 C 1000 429 956 385 901 385 z"/>
 </svg>
