@@ -49,7 +49,6 @@ class App extends Component {
     })
     var audio = document.getElementById("audioPlayer");
     audio.play();
-
   }
 
   playPause = (value) => {
