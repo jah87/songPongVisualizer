@@ -114,7 +114,7 @@ class App extends Component {
           frequencyWidth,
           frequencyHeight
         );
-        x += frequencyWidth + 4;
+        x += frequencyWidth + 2;
       }
 
       call = requestAnimationFrame(visualizeRender);
@@ -127,6 +127,10 @@ class App extends Component {
       cancelAnimationFrame(call);
     }
     window.addEventListener("resize", function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight - (window.innerHeight * .08);
+    });
+    window.addEventListener("orientationchange", function() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight - (window.innerHeight * .08);
     });
