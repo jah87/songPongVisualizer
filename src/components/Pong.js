@@ -7,9 +7,9 @@ class Pong extends Component {
             window.mozRequestAnimationFrame || 
             function (callback) {window.setTimeout(callback, 1000 / 60)};
         
-        var pongSpace = document.createElement('pongSpace');
-        var height = 90%;
-        var width = 100%;
+        var pongSpace = document.createElementById('pongSpace');
+        var height = 90;
+        var width = 100;
         pongSpace.width = width;
         pongSpace.height = height;
         var context = canvas.getContext('2d');
@@ -27,7 +27,7 @@ class Pong extends Component {
             update();
             pongRender();
             animate(step);
-        }
+        };
 
         var pongRender = function() {
             context.fillStyle = rgba(0,0,0,0);

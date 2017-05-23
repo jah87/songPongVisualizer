@@ -1,6 +1,6 @@
 {
-  "name": "spotify-clone-jh",
-  "version": "0.1.0",
+  "name": "song-visualizer",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
@@ -15,5 +15,22 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jah87/songPongVisualizer.git"
+  },
+  "keywords": [
+    "song",
+    "player",
+    "visualizer"
+  ],
+  "author": "jon hill, scott peacock, alex presman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jah87/songPongVisualizer/issues"
+  },
+  "homepage": "https://github.com/jah87/songPongVisualizer#readme"
 }
