@@ -27,7 +27,7 @@ h3 {
     color: white;
 }
 .player-box {
-  height: 40px;
+  height: 45px;
 }
 /* Remove Download Button from Audio Player */
 audio::-internal-media-controls-download-button {
@@ -42,12 +42,12 @@ audio::-webkit-media-controls-panel {
     width: calc(100% + 30px); /* Adjust as needed */
 }
 
-@media screen and (max-device-width: 767px) and (orientation: portrait) {
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
   .song-Card {
     display: none;
   }
 }
-@media screen and (max-device-width: 767px) and (orientation: landscape) {
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
   .song-Card {
     display: none;
   }
